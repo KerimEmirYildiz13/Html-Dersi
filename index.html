@@ -1,112 +1,32 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Tablo</title>
-
+    <title>Document</title>
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            background: #000000;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1{
-            text-align: center;
-            margin-bottom: 25px;
-            color: #ffffff;
-        }
-
-        form{
+        .kutu{
             display: flex;
-            justify-content: center;
+            background-color: blue;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-
-          table{
-            background: rgb(255, 0, 0);
-            border: 1px solid #ccc;
-            border-collapse: collapse;
-            width: 450px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+       .kutu div {
+            color: rgb(4, 0, 255);
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 100px;
+            background-color: rgb(229, 255, 0);
         }
-         td{
-            padding: 10px;
-            border: 1px solid #000000;
-        }
-
     </style>
-
 </head>
 <body>
-
-    <h1>Formlar</h1>
-
-    <form action="*" method="post">
-        <table>
-            <tr>
-                <td>Adınız:</td>
-                <td><input type="text" name="ad" placeholder="Adınızı Giriniz"></td>
-            </tr>
-
-            <tr>
-                <td>Şifreniz:</td>
-                <td><input type="password" name="şifre" placeholder="Şifrenizi Giriniz"></td>
-            </tr>
-
-            <tr>
-                <td>Mesajınız:</td>
-                <td><textarea name="mesaj" style="height:120px;"></textarea></td>
-            </tr>
-
-            <tr>
-                <td>Dosya Yükle:</td>
-                <td><input type="file" name="Dosya"></td>
-            </tr>
-
-            <tr>
-                <td>Hangi Marka Araba Kullanıyorsunuz?</td>
-                <td>
-                    <select name="Seçim">
-                        <option value="1">Fiat</option>
-                        <option value="2">Ford</option>
-                        <option value="3">Ferrari</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Cinsiyetiniz:</td>
-                <td>
-                    <input type="radio" value="erkek" name="Cinsiyet"> Erkek
-                    <input type="radio" value="kadın" name="Cinsiyet"> Kadın
-                </td>
-            </tr>
-
-            <tr>
-                <td>Tarih:</td>
-                <td><input type="date"></td>
-            </tr>
-
-            <tr>
-                <td>Saat:</td>
-                <td><input type="time"></td>
-            </tr>
-
-            <tr>
-                <td>Sayı:</td>
-                <td><input type="number"></td>
-            </tr>
-
-            <tr>
-                <td colspan="2" style="text-align:center;">
-                    <input type="submit" value="Gönder">
-                    <input type="reset" value="Sıfırla">
-                </td>
-            </tr>
-        </table>
-    </form>
-
+    <div class="kutu">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
 </body>
 </html>
