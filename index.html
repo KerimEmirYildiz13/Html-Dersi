@@ -4,64 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tablo</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+        }
+
+          table{
+            background: rgb(255, 0, 0);
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            width: 450px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+         td{
+            padding: 10px;
+            border: 1px solid #000000;
+        }
+
+    </style>
+
 </head>
-<body bgcolor="black" style="color:white; font-family: Arial, sans-serif;">
+<body>
 
     <h1>Formlar</h1>
 
     <form action="*" method="post">
-        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+        <table>
             <tr>
                 <td>Adınız:</td>
                 <td><input type="text" name="ad" placeholder="Adınızı Giriniz"></td>
             </tr>
+
             <tr>
                 <td>Şifreniz:</td>
                 <td><input type="password" name="şifre" placeholder="Şifrenizi Giriniz"></td>
             </tr>
+
             <tr>
                 <td>Mesajınız:</td>
-                <td><textarea name="mesaj" style="width:250px; height:120px;"></textarea></td>
+                <td><textarea name="mesaj" style="height:120px;"></textarea></td>
             </tr>
+
             <tr>
                 <td>Dosya Yükle:</td>
                 <td><input type="file" name="Dosya"></td>
             </tr>
+
             <tr>
                 <td>Hangi Marka Araba Kullanıyorsunuz?</td>
                 <td>
                     <select name="Seçim">
-                    <option value="1">Citroen</option>
-                         <option value="1">Marka Seçiniz</option>
-                        <option value="2">Citroen</option>
-                        <option value="3">Fiat</option>
-                        <option value="4">Ford</option>
-                        <option value="5">Hyundai</option>
-                        <option value="6">Renault</option>
-                        <option value="7">Volkswagen</option>
+                        <option value="1">Fiat</option>
+                        <option value="2">Ford</option>
+                        <option value="3">Ferrari</option>
                     </select>
                 </td>
             </tr>
+
             <tr>
                 <td>Cinsiyetiniz:</td>
                 <td>
                     <input type="radio" value="erkek" name="Cinsiyet"> Erkek
                     <input type="radio" value="kadın" name="Cinsiyet"> Kadın
-                    <input type="radio" value="cinsiyet belirtmek istemiyorum" name="Cinsiyet"> Cinsiyet Belirtmek İstemiyorum
                 </td>
             </tr>
+
             <tr>
                 <td>Tarih:</td>
                 <td><input type="date"></td>
             </tr>
+
             <tr>
                 <td>Saat:</td>
                 <td><input type="time"></td>
             </tr>
+
             <tr>
                 <td>Sayı:</td>
                 <td><input type="number"></td>
             </tr>
+
             <tr>
                 <td colspan="2" style="text-align:center;">
                     <input type="submit" value="Gönder">
@@ -73,5 +110,3 @@
 
 </body>
 </html>
-
-
