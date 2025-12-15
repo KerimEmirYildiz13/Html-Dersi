@@ -1,32 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ferrari Haber Kartları</title>
     <style>
-        .kutu{
+
+        .resim {
+            width: 300px;
+            height: 600px;
+            background-color: black;
+            padding: 6px;
             display: flex;
-            background-color: blue;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
+            /* Kartlar arasında boşluk bırakmak için margin ekledim */
+            margin: 0 10px; 
         }
-       .kutu div {
-            color: rgb(4, 0, 255);
-            width: 200px;
-            margin: 20px;
-            padding: 20px;
+
+        .resim a {
+            display: block;
+            height: 50%;
+            overflow: hidden; /* Resim taşarsa gizle */
+        }
+
+        .resim img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; /* Resmin kutuya tam oturmasını ve bozulmamasını sağlar */
+        }
+
+        .yazi {
+            height: 20%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Dikey ortalama için */
+            padding: 5px;
+        }
+
+        .yazi h3 {
+            color: white;
             text-align: center;
-            font-size: 100px;
-            background-color: rgb(229, 255, 0);
+            font-size: 16px;
+            margin: 0; /* Varsayılan marginleri sıfırla */
         }
-    </style>
+
+        .metin {
+            height: 30%;
+            background-color: red;
+            padding: 8px;
+            overflow-y: auto; /* Metin uzun olursa kaydırma çubuğu çıksın */
+        }
+
+        .metin p {
+            text-align: justify;
+            font-size: 13px;
+            margin-top: 0;
+        }
+            .kartlar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            flex-wrap: wrap; /* Ekran daralırsa kartlar alt satıra geçsin */
+        }
+
+</style>
 </head>
 <body>
-    <div class="kutu">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+
+    <div class="kartlar">
+        <div class="resim">
+            <a href="#" target="_blank">
+                <img src="https://tr.wikipedia.org/wiki/Ferrari_F40" alt="Ferrari F40 Klasik">
+            </a>
+            <div class="yazi">
+                <h3>Efsanevi Ferrari F40</h3>
+            </div>
+            <div class="metin">
+                <p>Ferrari'nin 40. yılı anısına üretilen, otomobil dünyasının en ikonik ve saf sürüş makinelerinden biri.</p>
+            </div>
+        </div>
+
+        <div class="resim">
+            <a href="#" target="_blank">
+                <img src="https://tr.motor1.com/news/596270/novitec-ferrari-sf90-stradale/" alt="Ferrari LaFerrari Hibrit">
+            </a>
+            <div class="yazi"><h3>LaFerrari: Hibrit Güç</h3></div>
+            <div class="metin"><p>Ferrari'nin ilk hibrit hiper otomobili, muazzam V12 motoru elektrik gücüyle birleştiriyor.</p></div>
+        </div>
+
+        <div class="resim">
+            <a href="#" target="_blank">
+                <img src="https://rossoautomobili.com/blogs/magazine/is-the-ferrari-488-pista-really-that-good" alt="Ferrari 488 Pista Pist Odaklı">
+            </a>
+            <div class="yazi"><h3>Pist Canavarı: 488 Pista</h3></div>
+            <div class="metin"><p>Adını İtalyanca 'pist' kelimesinden alan, aerodinamik harikası ve V8 motorlu bir şaheser.</p></div>
+        </div>
+
+        <div class="resim">
+            <a href="#" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Ferrari_SF90_Stradale_front_view.jpg/800px-Ferrari_SF90_Stradale_front_view.jpg" alt="Ferrari SF90 Stradale Yeni Nesil">
+            </a>
+            <div class="yazi"><h3>Geleceğin Hızı: SF90 Stradale</h3></div>
+            <div class="metin"><p>Ferrari'nin seri üretimdeki en güçlü ve teknolojik olarak en gelişmiş şarj edilebilir hibrit modeli.</p></div>
+        </div>
     </div>
+
 </body>
 </html>
